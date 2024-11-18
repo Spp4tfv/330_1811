@@ -39,3 +39,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push docker image
         run: docker push ghcr.io/spp4tfv/330_1811/node:latest
+      - name: Push docker image
+        run: docker push ghcr.io/spp4tfv/330_1811/pyth:latest
