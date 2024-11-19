@@ -55,6 +55,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             запуск js прошел успешно
+            file: pic.jpg
   build_pyth:
     runs-on: ubuntu-latest
     steps:
