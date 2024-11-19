@@ -79,11 +79,11 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             запуск pyth прошел неудачно
-    - name: send telegram message on push
+    - name: Send Telegram message with media on push
       if: success()
       uses: appleboy/telegram-action@master
       with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            запуск pyth прошел успешно
+         to: ${{ secrets.TELEGRAM_TO }}
+         token: ${{ secrets.TELEGRAM_TOKEN }}
+         message: "Запуск pyth прошел успешно"
+         photo: "./pic.jpg"  
