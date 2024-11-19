@@ -42,7 +42,7 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           to: ${{946996193 }}
-          token: ${{ 7852498401:AAGsl4bTUdM8MbZABQVpYUWQH4tBuc__xUI}}
+          token: ${{ 7852498401:AAGsl4bTUdM8MbZABQVpYUWQH4tBuc__xUI }}
           message: |
             Сообщение (строка #1)
             Сообщение (строка #2)
