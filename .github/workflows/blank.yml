@@ -38,8 +38,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push docker image
         run: docker push ghcr.io/spp4tfv/330_1811/node:latest
-        if: failure()
       - name: send telegram message on push
+        if: failure()
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
@@ -47,8 +47,8 @@ jobs:
           message: |
             запуск js прошел неудачно
             
-        if: success()
       - name: send telegram message on push
+        if: success()
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
@@ -69,16 +69,16 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
     - name: Push docker image
       run: docker push ghcr.io/spp4tfv/330_1811/pyth:latest
-      if: failure()
     - name: send telegram message on push
+      if: failure()
       uses: appleboy/telegram-action@master
       with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             запуск pyth прошел неудачно
-      if: success()
     - name: send telegram message on push
+      if: success()
       uses: appleboy/telegram-action@master
       with:
           to: ${{ secrets.TELEGRAM_TO }}
