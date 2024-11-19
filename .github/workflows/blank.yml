@@ -45,8 +45,8 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            запуск js прошел неудачно
-            )
+            запуск js прошел неудачно)
+            
         if: success(
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
@@ -54,8 +54,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            запуск js прошел успешно
-            )
+            запуск js прошел успешно)
   build_pyth:
     runs-on: ubuntu-latest
     steps:
@@ -77,8 +76,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            запуск pyth прошел неудачно
-            )
+            запуск pyth прошел неудачно)
       if: success(
     - name: send telegram message on push
       uses: appleboy/telegram-action@master
@@ -86,5 +84,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            запуск pyth прошел успешно
-            )
+            запуск pyth прошел успешно)
